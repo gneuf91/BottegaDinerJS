@@ -1,0 +1,37 @@
+.backgroundSkew {
+    width: 100vw;
+    height: 900px;
+    background-color: $darkGray;
+    margin-top: -17rem;
+    padding-top: 17rem;
+    border-bottom: 1rem solid $clearBlue;
+}
+
+
+.bd-heading {
+    text-align: center;
+    margin: 20px;
+    padding-top: 46px;
+    color: white;
+    font-weight: 700;
+    font-family: $font-primary;
+}
+
+.bd-subheading {
+    margin-bottom: 46px;
+    color: rgba(255,255,255,0.75);
+    font-size: 18px;
+}
+
+.bdMenu {
+    margin-bottom: 46px;
+    color: rgba(255,255,255,0.75);
+    font-size: 20px; 
+}
+
+.sideMenu {
+    margin-bottom: 46px;
+    color: rgba(255,255,255,0.75);
+    font-size: 20px; 
+
+}
