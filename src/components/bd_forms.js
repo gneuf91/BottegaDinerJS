@@ -6,14 +6,14 @@ import {
 } from 'reactstrap';
 import _ from 'lodash';
 
-import MadlibContent from './bdiner_content';
+import BDMenu from './bdiner_content';
 
-function MadlibInput(props) {
+function GuestInput(props) {
     return (
         <Col md="3" className="input-wrapper">
             <Row>
                 <Col md="2">
-                    <label className="green-label">{props.index}</label>
+                    <label className="blue-label">{props.index}</label>
                 </Col>
                 <Col md="10">
                     <input placeholder={props.placeholder} value={props.state} type='text' onChange={props.onChange} />
@@ -91,11 +91,11 @@ class BDin_Menu extends Component {
         return (
             <div className="card-wrapper">
                 <Card>
-                    <form onSubmit={this.handleSubmit} id="madlib-form">
+                    <form onSubmit={this.handleSubmit} id="guestChoice-form">
                         <Row style={{textAlign: 'center', color: 'white'}}>
                             {
                                 _.map(this.inputData, (data, indexKey) => {
-                                    return <MadlibInput key={indexKey} index={indexKey + 1} state={data.state} placeholder={data.placeholder} onChange={this.guestChoice({inputTitle:data.prop})} />
+                                    return <GuestInput key={indexKey} index={indexKey + 1} state={data.state} placeholder={data.placeholder} onChange={this.guestChoice({inputTitle:data.prop})} />
                                 })
                             }
                         
@@ -106,7 +106,7 @@ class BDin_Menu extends Component {
                             </Col>
                         </Row> 
                     </form>   
-                    <MadlibContent data={this.state}/>
+                    <BDMenu data={this.state}/>
                 </Card>
             </div>
         

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-class MadlibContent extends Component {
+class BDMenu extends Component {
     render() {
         this.count = 1
         const data = this.props.data;
@@ -24,4 +24,4 @@ class MadlibContent extends Component {
 
 
 
-export default MadlibContent;
+export default BDMenu;
