@@ -5,7 +5,7 @@ export default class App extends Component {
   render() {
     return (
         <div>
-          <div className="backgroundSkew">
+          <div className="background">
             <div className="bd-heading">
               <h1>Bottega Diner</h1>
               <div className="bd-subheading">
@@ -15,16 +15,16 @@ export default class App extends Component {
               <div className="bdMenu">
                 Menu<br/>
                 Breakfast - Omelet - $10, Biscuits & Gravy - $12, and Pancakes - $8<br/>
-                Lunch - Sandwich - $10, Hamburger - $12, Chicken Tenders - $10<br/>
+                Lunch - Sandwich - $10, Hamburger - $12, Chicken Tenders - $8<br/>
                 Dinner - Pasta - $12, Parmesan Chicken - $12, Roast Beef - $14
               </div>
               <div className="sideMenu">
-                Sides<br/>
-                Fruit bowl, Steamed Vegetables, Fries, Onion Rings, Salad, Soup, Milkshake, Pudding
+                Sides - Please Choose Two<br/>
+                Fruit bowl, Steamed Vegetables, Fries, Onion Rings, Salad, Soup, Milkshake, Pudding, Jello
               </div>
-           </div>
-           <BDin_Menu />
-        </div>  
+          </div>
+          <BDin_Menu />
+        </div> 
       </div>   
     );
   }

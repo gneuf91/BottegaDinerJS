@@ -8,7 +8,8 @@ class BDMenu extends Component {
             <div className={data.completedForm ? 'showContent' : 'hideContent'}>
                 <div className="content-wrapper">
                     Thank you for your order, Your Entree is: {this.renderLabel(data.entree)}, your first side is
-                    {this.renderLabel(data.sideOne)} and your second side is: {this.renderLabel(data.sideTwo)}, or {this.renderLabel(data.chefsChoice)} for Chef's Choice. Is this right?...That sounds delicious! Your order total is:
+                    {this.renderLabel(data.sideOne)} and your second side is: {this.renderLabel(data.sideTwo)}, or {this.renderLabel(data.chefsChoice)} for Chef's Choice. 
+                    Is this right?...That sounds delicious! Your order total is: ${data.orderTotal}
                 </div>
             </div>
         )

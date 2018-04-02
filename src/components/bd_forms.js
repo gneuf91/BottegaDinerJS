@@ -43,8 +43,10 @@ class BDin_Menu extends Component {
             sideOne: '',
             sideTwo: '',
             chefsChoice: '',
+            orderTotal: 0
         }
     }
+
 
     guestChoice = function(props) {
         return function (event) {
@@ -65,13 +67,37 @@ class BDin_Menu extends Component {
             sideOne: '',
             sideTwo: '',
             chefsChoice: '',
+            orderTotal: 0
         });
     }.bind(this)
 
     renderButton = function() {
         if(this.state.completedForm) {
+            if (this.state.entree == 'omelet') {
+                this.state.orderTotal += 10
+            } else if (this.state.entree == 'pasta') {
+                this.state.orderTotal += 12
+            } else if (this.state.entree == 'sandwich') {
+                this.state.orderTotal += 10
+            } else if (this.state.entree == 'hamburger') {
+                this.state.orderTotal += 12
+            } else if (this.state.entree == 'biscuits & gravy') {
+                this.state.orderTotal += 12
+            } else if (this.state.entree == 'parmesan chicken') {
+                this.state.orderTotal += 12
+            } else if (this.state.entree == 'pancakes') {
+                this.state.orderTotal += 8
+            } else if (this.state.entree == 'chicken tenders') {
+                this.state.orderTotal += 8
+            } else if (this.state.entree == 'roast beef') {
+                this.state.orderTotal += 14
+            } 
+            if (this.state.chefsChoice == 'yes') {
+                this.state.orderTotal += 10
+            }
             return <a className="clear-button" onClick={this.handleClick}>Clear Order</a>
         }
+        this.state.orderTotal = 0
         return <input type="submit" className="generate-button" value="Generate Order Total" />
         
     }
@@ -114,4 +140,5 @@ class BDin_Menu extends Component {
     }
 }
 
-export default BDin_Menu;
+export default BDin_Menu
+
